@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <title>Train Schedule</title>
+</head>
+
+<body class="bg-dark">
+  <div class="container">
+    <div class="title-div jumbotron text-center bg-info">
+      <h1>Train Schedule</h1>
+      <h4>Gotta Catch a Train</h4>
+      <h4 class="current-time"></h4>
+    </div>
+    <div class="table-div card m-4 border border-info">
+      <p class="bg-info p-2 font-weight-bold">Train Schedule</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency</th>
+            <th scope="col">Next Arrival</th>
+            <th scope="col">Minutes Away</th>
+            <!-- <th scope="col">Total Billed $</th> -->
+          </tr>
+        </thead>
+        <tbody id="records">
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="form-div card m-4 border border-info">
+      <p class="bg bg-info p-2 font-weight-bold">Add Train</p>
+      <form class="p-4" action="index.html" method="post">
+        <div class="form-group">
+          <label for="Train Name">Train Name</label>
+          <br>
+          <input id="name" class="col-8" type="text" name="name" value="">
+        </div>
+        <div class="form-group">
+          <label for="Destination">Destination</label>
+          <br>
+          <input id="destination" class="col-8" type="text" name="Destination" value="">
+        </div>
+        <div class="form-group">
+          <label for="time">First Train Time(HH:mm - Military Time)</label>
+          <br>
+          <input id="start-time" class="col-8" type="text" name="time" value="" >
+        </div>
+        <div class="form-group">
+          <label for="frequency">Frequency</label>
+          <br>
+          <input id="frequency" class="col-8" type="number" name="frequency" value="">
+        </div>
+        <div class="form-group">
+          <input id="submit" class="btn btn-dark" type="submit" name="submit" value="Make a Train">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script type="text/javascript" src="train.js"></script>
+
+</body>
+
+</html>
